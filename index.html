@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Serial Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/formating.js" defer></script>
+</head>
+<body>
+
+    <header id="notSupported" class="hidden">
+        Sorry, <b>Web Serial</b> is not supported on this device, make sure you're
+        running Chrome 78 or later and have enabled the
+        <code>#enable-experimental-web-platform-features</code> flag in
+        <code>chrome://flags</code>
+    </header>
+
+    <div class="controls">
+        <label for="baudSelect">Baud Rate:</label>
+        <select id="baudSelect" onchange="setBaudRate()">
+            <option value="300">300</option>
+            <option value="1200">1200</option>
+            <option value="2400">2400</option>
+            <option value="4800">4800</option>
+            <option value="9600" selected>9600</option>
+            <option value="19200">19200</option>
+            <option value="38400">38400</option>
+            <option value="57600">57600</option>
+            <option value="74800">74800</option>
+            <option value="115200">115200</option>
+            <option value="230400">230400</option>
+            <option value="500000">500000</option>
+            <option value="1000000">1000000</option>
+            <option value="2000000">2000000</option>
+        </select>
+
+        <input id="baudRateField" type="number" value="" />
+        <button id="connect" type="button">Connect</button>
+
+        <hr>
+
+        <label for="scroll">AutoScroll:</label>
+        <input type="checkbox" id="scroll" onclick="setAutoScroll()" checked /> <br>
+
+        <label for="time">Time Stamp:</label>
+        <input type="checkbox" id="time" onclick="setTimeStamp()" /> <br><br>
+
+        <button id="clear" type="button" onclick="clearLog()">Clear Log</button>
+
+        <div id="error log" class="errors">
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <pre id="log"></pre>
+
+    <footer>
+        <form onsubmit="event.preventDefault(); sendMessage();">
+            <input id="messageBox" type="text" value="" size="150" onkeydown="return getSendHistory(event)" />
+            <select id="sendEnding" onchange="setEndingType()">
+                <option value=0>No line ending</option>
+                <option value=1 selected>New Line</option>
+                <option value=2>Carrige Return</option>
+                <option value=3>Both NL & CR</option>
+            </select>
+            <button id="send" type="submit">Send</button>
+        </form>
+    </footer>
+
+</body>
+</html>

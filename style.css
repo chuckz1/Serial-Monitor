@@ -1,0 +1,50 @@
+﻿.hidden {
+    display: none;
+}
+
+#notSupported {
+    padding: 1em;
+    background-color: red;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#log {
+    background-color: rgb(210, 210, 210);
+    overflow: auto;
+    width: 70%;
+    border-style: solid;
+    position: fixed;
+    top: 20px;
+    bottom: 40px;
+}
+
+.controls {
+    position: fixed;
+    right: 20px;
+    width: 20%;
+    height: 80%;
+    top: 20px;
+    //border-style: solid;
+    overflow: auto;
+    padding: 1px;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+#baudRateField {
+    width: 80px;
+}
+
+.errors {
+    padding: 1em;
+    background-color: red;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
