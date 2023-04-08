@@ -67,7 +67,11 @@ function sendMessage() {
     //writeToStream(document.getElementById("messageBox").value);
 
     if (writeCustomToStream(document.getElementById("messageBox").value)) {
+        //add message to history
         addSendHistory(document.getElementById("messageBox").value);
+
+        //clear message box after sent
+        document.getElementById("messageBox").value = "";
     }
 
     function writeCustomToStream(...lines) {
