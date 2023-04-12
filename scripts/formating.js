@@ -40,8 +40,12 @@ function writeToLog(value) {
 
     if (timeStamp) {
         let today = new Date();
-        log.textContent += today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
-        log.textContent += ":" + today.getMinutes() + ":" + today.getSeconds() + "." + today.getMilliseconds() + " -> ";
+		let timeText = ""
+        timeText += today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
+        timeText += ":" + today.getMinutes() + ":" + today.getSeconds() + "." + today.getMilliseconds() + " -> ";
+
+		//replace all new lines
+		value = value.replace(/\r\n|\n/g, "\n" + timeText);
     }
 
     log.textContent += value;

@@ -114,7 +114,7 @@ async function readLoop() {
     while (true) {
         const { value, done } = await reader.read();
         if (value) {
-            writeToLog(value + "\n");
+            writeToLog("\n" + value);
             
         }
         if (done) {

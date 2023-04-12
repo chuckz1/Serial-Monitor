@@ -17,7 +17,7 @@
     border-style: solid;
     position: fixed;
     top: 20px;
-    bottom: 40px;
+    bottom: 60px;
 }
 
 .controls {
@@ -26,7 +26,7 @@
     width: 20%;
     height: 80%;
     top: 20px;
-    //border-style: solid;
+    /*border-style: solid;*/
     overflow: auto;
     padding: 1px;
 }
