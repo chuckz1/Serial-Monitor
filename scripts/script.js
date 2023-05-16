@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //check if serial is supported
     const notSupported = document.getElementById("notSupported");
     notSupported.classList.toggle("hidden", "serial" in navigator);
+
+	//hide other elements
 });
 
 //creates a serial connection

@@ -18,6 +18,8 @@
     position: fixed;
     top: 20px;
     bottom: 60px;
+
+	z-index: 1;
 }
 
 .controls {
