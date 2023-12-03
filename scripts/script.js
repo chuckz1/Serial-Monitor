@@ -63,6 +63,8 @@ async function connect() {
     reader = inputStream.getReader();
     readLoop();
 }
+
+
 var mess;
 //closes a connected serial port
 async function disconnect() {
