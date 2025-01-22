@@ -1,52 +1,59 @@
-﻿.hidden {
-    display: none;
+﻿/* Class to hide elements */
+.hidden {
+	display: none;
 }
 
+/* Style for the unsupported browser message */
 #notSupported {
-    padding: 1em;
-    background-color: red;
-    color: white;
-    margin-top: 1em;
-    margin-bottom: 1em;
+	padding: 1em;
+	background-color: red;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
+/* Style for the log area */
 #log {
-    background-color: rgb(210, 210, 210);
-    overflow: auto;
-    width: 70%;
-    border-style: solid;
-    position: fixed;
-    top: 20px;
-    bottom: 60px;
-
+	background-color: rgb(210, 210, 210);
+	overflow: auto;
+	width: 70%;
+	border-style: solid;
+	position: fixed;
+	top: 20px;
+	bottom: 60px;
 	z-index: 1;
 }
 
+/* Style for the control panel */
 .controls {
-    position: fixed;
-    right: 20px;
-    width: 20%;
-    height: 80%;
-    top: 20px;
-    /*border-style: solid;*/
-    overflow: auto;
-    padding: 1px;
+	position: fixed;
+	right: 20px;
+	width: 20%;
+	height: 80%;
+	top: 20px;
+	/* Optional border */
+	/* border-style: solid; */
+	overflow: auto;
+	padding: 1px;
 }
 
+/* Style for the footer */
 footer {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
 }
 
+/* Adjust width of the baud rate field */
 #baudRateField {
-    width: 80px;
+	width: 80px;
 }
 
+/* Style for error messages */
 .errors {
-    padding: 1em;
-    background-color: red;
-    color: white;
-    margin-top: 1em;
-    margin-bottom: 1em;
+	padding: 1em;
+	background-color: red;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
